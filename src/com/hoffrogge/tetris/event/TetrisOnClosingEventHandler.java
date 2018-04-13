@@ -8,25 +8,24 @@ import com.hoffrogge.tetris.TetrisGame;
 import javafx.event.EventHandler;
 import javafx.stage.WindowEvent;
 
-@SuppressWarnings("restriction")
 public class TetrisOnClosingEventHandler implements EventHandler<WindowEvent> {
 
-    private TetrisGame tetrisGame;
+	private TetrisGame tetrisGame;
 
-    public TetrisOnClosingEventHandler(TetrisGame tetrisGame) {
-        this.tetrisGame = tetrisGame;
-    }
+	public TetrisOnClosingEventHandler(TetrisGame tetrisGame) {
+		this.tetrisGame = tetrisGame;
+	}
 
-    @Override
-    public void handle(WindowEvent event) {
+	@Override
+	public void handle(WindowEvent event) {
 
-        try {
+		try {
 
-            this.tetrisGame.stop();
+			this.tetrisGame.stop();
 
-        } catch (InterruptedException e) {
-            Logger.getGlobal().log(Level.OFF, e.getMessage(), e);
-            Thread.currentThread().interrupt();
-        }
-    }
+		} catch (InterruptedException e) {
+			Logger.getGlobal().log(Level.OFF, e.getMessage(), e);
+			Thread.currentThread().interrupt();
+		}
+	}
 }
