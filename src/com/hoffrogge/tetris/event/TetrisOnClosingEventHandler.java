@@ -3,16 +3,16 @@ package com.hoffrogge.tetris.event;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.hoffrogge.tetris.TetrisGame;
+import com.hoffrogge.tetris.TetrisGameLoop;
 
 import javafx.event.EventHandler;
 import javafx.stage.WindowEvent;
 
 public class TetrisOnClosingEventHandler implements EventHandler<WindowEvent> {
 
-	private TetrisGame tetrisGame;
+	private TetrisGameLoop tetrisGame;
 
-	public TetrisOnClosingEventHandler(TetrisGame tetrisGame) {
+	public TetrisOnClosingEventHandler(TetrisGameLoop tetrisGame) {
 		this.tetrisGame = tetrisGame;
 	}
 

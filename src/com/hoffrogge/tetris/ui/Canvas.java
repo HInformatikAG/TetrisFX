@@ -4,8 +4,8 @@ import com.hoffrogge.tetris.TetrisModel;
 
 public interface Canvas {
 
-    void refresh(TetrisGraphics tetrisGraphics, TetrisModel tetrisModel);
+    void refresh(TetrisGraphicsContext tetrisGraphics, TetrisModel tetrisModel);
 
-    void render(TetrisGraphics tetrisGraphics, TetrisModel tetrisModel);
+    void render(TetrisGraphicsContext tetrisGraphics, TetrisModel tetrisModel);
 
 }

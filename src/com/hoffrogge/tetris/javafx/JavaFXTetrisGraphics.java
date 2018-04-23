@@ -1,11 +1,12 @@
 package com.hoffrogge.tetris.javafx;
 
-import com.hoffrogge.tetris.ui.TetrisGraphics;
+import com.hoffrogge.lehreinheit03.Farbe;
+import com.hoffrogge.tetris.ui.TetrisGraphicsContext;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class JavaFXTetrisGraphics implements TetrisGraphics {
+public class JavaFXTetrisGraphics implements TetrisGraphicsContext {
 
 	private GraphicsContext graphicsContext;
 
@@ -34,7 +35,7 @@ public class JavaFXTetrisGraphics implements TetrisGraphics {
 	}
 
 	@Override
-	public void setColor(int r, int g, int b) {
+	public void setColor(Farbe farbe) {
 		// Auto-generated method stub
 	}
 }

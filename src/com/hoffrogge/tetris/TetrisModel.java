@@ -1,15 +1,23 @@
 package com.hoffrogge.tetris;
 
+import java.awt.Graphics;
+
+import com.hoffrogge.lehreinheit04.GeometrischeFigur;
+import com.hoffrogge.tetris.model.TetrominoBlock;
+
 public class TetrisModel {
 
 	private int count;
-	private TetrisGame tetrisGame;
+	private TetrisGameLoop tetrisGame;
 
-	public TetrisModel(TetrisGame tetrisGame) {
+	private GeometrischeFigur fallenderStein;
+	// private List<GeometrischeFigur> gefalleneSteine;
+
+	public TetrisModel(TetrisGameLoop tetrisGame) {
 		this.tetrisGame = tetrisGame;
 	}
 
-	public int getWidht() {
+	public int getWidth() {
 		return (int) tetrisGame.getWidht();
 	}
 
@@ -23,5 +31,28 @@ public class TetrisModel {
 
 	public int getCount() {
 		return count;
+	}
+
+	public void update(Graphics graphics) {
+
+		if (fallenderStein == null)
+			fallenderStein = randomNeue();
+
+		/* Ist das Spiel vorbei? */
+
+		/* Ermitteln, ob der gefallene Stein nun zu den gefallenen gehört */
+
+		// for (GeometrischeFigur geometrischeFigur : gefalleneSteine)
+		// geometrischeFigur.zeichnen(tetrisGraphics);
+
+		fallenderStein.zeichnen(graphics);
+	}
+
+	private GeometrischeFigur randomNeue() {
+
+		int x = getWidth() / 2;
+		int y = 0;
+
+		return new TetrominoBlock(x, y);
 	}
 }

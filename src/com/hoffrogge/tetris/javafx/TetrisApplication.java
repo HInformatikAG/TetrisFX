@@ -1,9 +1,9 @@
 package com.hoffrogge.tetris.javafx;
 
-import com.hoffrogge.tetris.TetrisGame;
+import com.hoffrogge.tetris.TetrisGameLoop;
 import com.hoffrogge.tetris.event.TetrisOnClosingEventHandler;
 import com.hoffrogge.tetris.ui.TetrisCanvas;
-import com.hoffrogge.tetris.ui.TetrisGraphics;
+import com.hoffrogge.tetris.ui.TetrisGraphicsContext;
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -20,10 +20,10 @@ public class TetrisApplication extends Application {
 		Canvas canvas = new Canvas(300, 600);
 		GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
 
-		TetrisGraphics tetrisGraphics = new JavaFXTetrisGraphics(graphicsContext);
+		TetrisGraphicsContext tetrisGraphics = new JavaFXTetrisGraphics(graphicsContext);
 		TetrisCanvas tetrisCanvas = new TetrisCanvas();
 
-		TetrisGame tetrisGame = new TetrisGame(tetrisCanvas, tetrisGraphics);
+		TetrisGameLoop tetrisGame = new TetrisGameLoop(tetrisCanvas, tetrisGraphics);
 
 		primaryStage.setResizable(false);
 		primaryStage.setTitle("Java FX Tetris"); //$NON-NLS-1$

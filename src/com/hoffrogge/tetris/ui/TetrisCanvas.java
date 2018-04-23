@@ -4,9 +4,9 @@ import com.hoffrogge.tetris.TetrisModel;
 
 public class TetrisCanvas extends AbstractCanvas {
 
-    @Override
-    public void render(TetrisGraphics tetrisGraphics, TetrisModel tetrisModel) {
+	@Override
+	public void render(TetrisGraphicsContext tetrisGraphics, TetrisModel tetrisModel) {
 
-        /* Zeichenlogik kommt hier hin */
-    }
+		/* Zeichenlogik kommt hier hin */
+	}
 }
