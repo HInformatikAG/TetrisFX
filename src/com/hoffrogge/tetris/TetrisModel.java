@@ -3,7 +3,6 @@ package com.hoffrogge.tetris;
 import java.awt.Graphics;
 
 import com.hoffrogge.lehreinheit04.GeometrischeFigur;
-import com.hoffrogge.tetris.model.TetrominoBlock;
 
 public class TetrisModel {
 
@@ -51,7 +50,7 @@ public class TetrisModel {
 	private GeometrischeFigur randomNeue() {
 
 		int x = getWidth() / 2;
-		int y = 0;
+		int y = 100;
 
 		return new TetrominoBlock(x, y);
 	}
